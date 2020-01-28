@@ -21,3 +21,6 @@ property2.save()
 
 binding.pry
 nil
+
+# Step 1. run the ruby file from the main directory eg : ruby console.rb/
+# Step2 run the psql file / psql -d property_tracker that allowed us to then run SELECT * FROM property_tracker 

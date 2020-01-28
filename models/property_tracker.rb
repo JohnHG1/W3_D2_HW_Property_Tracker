@@ -1,6 +1,7 @@
 require("pg")
 
 class PropertyTracker
+  #not good idea to use the term tracker as this is what the app is going to do
 
   attr_accessor :address, :value, :bedrooms, :build
 
@@ -55,6 +56,19 @@ class PropertyTracker
         db.exec_prepared("update", values)
         db.close()
       end
+
+    # def find_by_id(id)
+    #   db = PG.connect({dbname: 'property_tracker', host:
+        # 'localhost'})
+    #     sql = "SELECT * FROM property_tracker WHERE id = $1"
+    #     value =[id]
+    #     db.prepare("find", sql)
+    #     results_array = db.exec_prepared("find", values')
+    #     db.close()
+          # property_hash = results_array[0]
+          # found_property = Property.new(property_hash)
+    #     return found_property
+    #   end
 
 
   def self.all()
